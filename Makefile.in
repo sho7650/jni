@@ -131,7 +131,7 @@ am__uninstall_files_from_dir = { \
 am__installdirs = "$(DESTDIR)$(libdir)"
 LTLIBRARIES = $(lib_LTLIBRARIES)
 libJniSample_la_LIBADD =
-am_libJniSample_la_OBJECTS = JniSample.lo
+am_libJniSample_la_OBJECTS = libJniSample_la-JniSample.lo
 libJniSample_la_OBJECTS = $(am_libJniSample_la_OBJECTS)
 AM_V_lt = $(am__v_lt_@AM_V@)
 am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
@@ -139,8 +139,8 @@ am__v_lt_0 = --silent
 am__v_lt_1 = 
 libJniSample_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CCLD) \
-	$(AM_CFLAGS) $(CFLAGS) $(libJniSample_la_LDFLAGS) $(LDFLAGS) \
-	-o $@
+	$(libJniSample_la_CFLAGS) $(CFLAGS) $(libJniSample_la_LDFLAGS) \
+	$(LDFLAGS) -o $@
 AM_V_P = $(am__v_P_@AM_V@)
 am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
 am__v_P_0 = false
@@ -342,7 +342,7 @@ top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 lib_LTLIBRARIES = libJniSample.la
 libJniSample_la_SOURCES = JniSample.c JniSample.h
-# libJniSample_la_CFLAGS=-fPIC
+libJniSample_la_CFLAGS = -I./include -I./include/linux
 libJniSample_la_LDFLAGS = -version-info 0:0:0
 all: config.h
 	$(MAKE) $(AM_MAKEFLAGS) all-am
@@ -442,7 +442,7 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/JniSample.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libJniSample_la-JniSample.Plo@am__quote@
 
 .c.o:
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
@@ -464,6 +464,13 @@ distclean-compile:
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='$<' object='$@' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LTCOMPILE) -c -o $@ $<
+
+libJniSample_la-JniSample.lo: JniSample.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libJniSample_la_CFLAGS) $(CFLAGS) -MT libJniSample_la-JniSample.lo -MD -MP -MF $(DEPDIR)/libJniSample_la-JniSample.Tpo -c -o libJniSample_la-JniSample.lo `test -f 'JniSample.c' || echo '$(srcdir)/'`JniSample.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libJniSample_la-JniSample.Tpo $(DEPDIR)/libJniSample_la-JniSample.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='JniSample.c' object='libJniSample_la-JniSample.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libJniSample_la_CFLAGS) $(CFLAGS) -c -o libJniSample_la-JniSample.lo `test -f 'JniSample.c' || echo '$(srcdir)/'`JniSample.c
 
 mostlyclean-libtool:
 	-rm -f *.lo
