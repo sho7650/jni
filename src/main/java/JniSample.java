@@ -8,22 +8,25 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 @EnableAutoConfiguration
 public class JniSample {
+    static {
+        System.loadLibrary("JniSample");
+    }
+
     public native double exp(double a);
     public native boolean strcmp(String a, String b);
 
     @RequestMapping("/")
     @ResponseBody
     String home() {
-        System.loadLibrary("JniSample");
+        return "Hello World!";
+    }
+
+    public static void main(String[] args) throws Exception {
         JniSample s = new JniSample();
 	System.out.println("exp(1.0) -> " + s.exp(1.0));
 	System.out.println("exp(2.0) -> " + s.exp(2.0));
 	System.out.println("strcmp(\"Mutsuki\", \"Namajima\") -> " + s.strcmp("Mutsuki", "Nakajima"));
 	System.out.println("strcmp(\"Mutsuki\", \"Mutsuki\") -> " + s.strcmp("Mutsuki", "Mutsuki"));
-        return "Hello World!";
-    }
-
-    public static void main(String[] args) throws Exception {
 	SpringApplication.run(JniSample.class, args);
     }
 }
