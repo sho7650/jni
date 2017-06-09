@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 @EnableAutoConfiguration
 public class JniSample {
     static {
-        System.loadLibrary("JniSample");
+        System.loadLibrary("libJniSample");
     }
 
     public native double exp(double a);
