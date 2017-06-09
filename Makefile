@@ -2,7 +2,7 @@
 #
 #
 COMPILER = gcc
-CFLAGS   = -g -MMD -MP -Wall -Wextra -Winit-self -Wno-missing-field-initializers -fPIC -shared
+CFLAGS   = -fPIC -shared
 # CFLAGS   = -Wall
 LIBS     =
 LDFLAGS  = 
