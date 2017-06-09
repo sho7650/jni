@@ -1,13 +1,12 @@
 #
 #
 #
-JAVA_HOME = /app/.jdk
 COMPILER = gcc
 CFLAGS   = -fPIC -shared
 # CFLAGS   = -Wall
 LIBS     =
 LDFLAGS  = 
-INCLUDE  = -I$(JAVA_HOME)/include -I$(JAVA_HOME)/include/linux -I./include
+INCLUDE  = -I./include -I./include/linux
 TARGET   = ./lib/libJniSample.so
 LIBDIR   = ./lib
 SRCDIR   = ./source
