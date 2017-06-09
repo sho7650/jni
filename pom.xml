@@ -30,7 +30,7 @@
 			<configuration>
 				<archive>
 					<manifest>
-						<mainClass>com.jnisample</mainClass>
+						<mainClass>com.JniSample</mainClass>
 					</manifest>
 				</archive>
 			</configuration>
