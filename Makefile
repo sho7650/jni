@@ -1,6 +1,7 @@
 #
 #
 #
+JAVA_HOME = /app/.jdk
 COMPILER = gcc
 CFLAGS   = -fPIC -shared
 # CFLAGS   = -Wall
