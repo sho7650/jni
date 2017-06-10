@@ -18,7 +18,8 @@ public class JniSample {
     @RequestMapping("/")
     @ResponseBody
     String home() {
-        return "Hello World!";
+        JniSample s = new JniSample();
+        return "Hello World!" + s.exp(2.0);
     }
 
     public static void main(String[] args) {
