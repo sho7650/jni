@@ -30,7 +30,7 @@
       <artifactId>NativeLibrary</artifactId>
       <version>1.0</version>
       <scope>system</scope>
-      <systemPath>${basedir}/lib/libJniSample.so</systemPath>
+      <systemPath>./lib/libJniSample.so</systemPath>
     </dependency>
   </dependencies>
 
