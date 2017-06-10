@@ -19,7 +19,7 @@ public class JniSample {
     @ResponseBody
     String home() {
         JniSample s = new JniSample();
-        return "Hello World!" + s.exp(2.0);
+        return "Hello World!<br /> Native call :exp(2.0) result => " + s.exp(2.0);
     }
 
     public static void main(String[] args) {
