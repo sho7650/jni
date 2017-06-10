@@ -9,14 +9,6 @@ extern "C" {
 #endif
 /*
  * Class:     JniSample
- * Method:    sayHello
- * Signature: ()I
- */
-JNIEXPORT jint JNICALL Java_JniSample_sayHello
-  (JNIEnv *, jobject);
-
-/*
- * Class:     JniSample
  * Method:    exp
  * Signature: (D)D
  */
