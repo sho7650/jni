@@ -25,13 +25,6 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
-    <dependency>
-      <groupId>com.jnisample.JniSample</groupId>
-      <artifactId>NativeLibrary</artifactId>
-      <version>1.0</version>
-      <scope>system</scope>
-      <systemPath>lib/libJniSample.so</systemPath>
-    </dependency>
   </dependencies>
 
 

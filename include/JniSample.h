@@ -12,7 +12,7 @@ extern "C" {
  * Method:    exp
  * Signature: (D)D
  */
-JNIEXPORT jdouble JNICALL Java_JniSample_exp
+JNIEXPORT jdouble JNICALL Java_com_jnisample_JniSample_exp
   (JNIEnv *, jobject, jdouble);
 
 /*
@@ -20,7 +20,7 @@ JNIEXPORT jdouble JNICALL Java_JniSample_exp
  * Method:    strcmp
  * Signature: (Ljava/lang/String;Ljava/lang/String;)Z
  */
-JNIEXPORT jboolean JNICALL Java_JniSample_strcmp
+JNIEXPORT jboolean JNICALL Java_com_jnisample_JniSample_strcmp
   (JNIEnv *, jobject, jstring, jstring);
 
 #ifdef __cplusplus
