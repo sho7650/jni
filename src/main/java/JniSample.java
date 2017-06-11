@@ -1,4 +1,4 @@
-package com.jnisample;
+//package com.jnisample;
 
 import org.springframework.boot.*;  
 import org.springframework.boot.autoconfigure.*;  
